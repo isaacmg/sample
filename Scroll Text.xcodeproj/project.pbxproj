@@ -395,6 +395,7 @@
 		6AAD9D8216DFA7B8007BB843 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Scroll Text/Scroll Text-Prefix.pch";
 				INFOPLIST_FILE = "Scroll Text/Scroll Text-Info.plist";
@@ -406,6 +407,7 @@
 		6AAD9D8316DFA7B8007BB843 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Scroll Text/Scroll Text-Prefix.pch";
 				INFOPLIST_FILE = "Scroll Text/Scroll Text-Info.plist";
@@ -467,6 +469,7 @@
 				6AAD9D8316DFA7B8007BB843 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6AAD9D8416DFA7B8007BB843 /* Build configuration list for PBXNativeTarget "Scroll TextTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +478,7 @@
 				6AAD9D8616DFA7B8007BB843 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,21 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="lh5-qQ-Qdx">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="4">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="i50-71-U4q">
+                                <connections>
+                                    <action selector="changePage" destination="2" eventType="valueChanged" id="8Ut-aJ-Scl"/>
+                                </connections>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBS-bA-PqY"/>
+                        </subviews>
+                        <color key="backgroundColor" red="0.34836611550000002" green="0.61448508270000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WBS-bA-PqY" secondAttribute="trailing" constant="418" id="Dmk-a7-0pa"/>
+                            <constraint firstAttribute="bottom" secondItem="WBS-bA-PqY" secondAttribute="bottom" constant="420" id="SOo-WZ-F4J"/>
+                            <constraint firstAttribute="bottom" secondItem="i50-71-U4q" secondAttribute="bottom" constant="302" id="dZv-WF-H8l"/>
+                            <constraint firstItem="WBS-bA-PqY" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="-5" id="iGO-nw-WqB"/>
+                            <constraint firstItem="WBS-bA-PqY" firstAttribute="top" secondItem="5" secondAttribute="top" constant="298" id="j4o-aH-CAf"/>
+                            <constraint firstItem="i50-71-U4q" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="173" id="laK-Py-Suc"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ScK-cQ-Mjm" appends="YES" id="kFe-02-UlY"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="YVV-EO-miE"/>
+                    <connections>
+                        <outlet property="pageControl2" destination="i50-71-U4q" id="1v2-nX-MH2"/>
+                        <outlet property="scrollView" destination="WBS-bA-PqY" id="1Ri-rE-xhR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="ScK-cQ-Mjm"/>
             </objects>
+            <point key="canvasLocation" x="858" y="-194"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SpT-an-CvV">
+            <objects>
+                <navigationController id="lh5-qQ-Qdx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oSW-Ag-jO8">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="D8P-2A-5eF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iel-kp-k2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-116" y="-194"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
